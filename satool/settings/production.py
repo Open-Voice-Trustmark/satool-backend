@@ -42,7 +42,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = os.environ["DEFAULT_FROM_EMAIL"]
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("https://ovon-front-5f7cff27c7ff.herokuapp.com",)
+CORS_ORIGIN_WHITELIST = ("https://satool-frontend-b98fe011b135.herokuapp.com",)
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
