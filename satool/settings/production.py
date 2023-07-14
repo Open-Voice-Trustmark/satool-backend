@@ -9,7 +9,7 @@ DEBUG = os.environ.get("DEBUG", False)
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 ALLOWED_HOSTS = [
-    "ovon-4560aaea157a.herokuapp.com",
+    "satool-backend-8ba91e884185.herokuapp.com",
 ]
 
 import dj_database_url
