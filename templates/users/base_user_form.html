@@ -1,0 +1,8 @@
+{% extends 'users/base_user.html' %}
+{% load crispy_forms_tags %}
+
+{% block user_content %}
+<form class="flex-lg-grow-1 d-lg-flex flex-lg-column" method="post">
+	{% crispy form %}
+</form>
+{% endblock %}

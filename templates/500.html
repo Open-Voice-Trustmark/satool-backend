@@ -1,0 +1,8 @@
+{% load i18n %} {% extends 'base.html' %} {% block content %}
+<div class="container-fluid p-0" style="min-height: 90vh">
+  <h1>{% trans "Error 500: Something went wrong in our server." %}</h1>
+  <p>
+    {% trans "Please refresh this page or contact us if the problem persists" %}
+  </p>
+</div>
+{% endblock %}

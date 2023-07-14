@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    {% with default_title="OVON Platform" default_description="OVON Platform" %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      property="og:title"
+      content="{% if request.title %}{{request.title}}{% else %}{{default_title}}{% endif %}"
+    />
+    <meta
+      property="og:description"
+      content="{% if request.description %}{{request.description}}{% else %}{{default_description}}{% endif %}"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="{% if request.is_secure %}https{% else %}http{% endif %}://{{ request.get_host }}{{ request.get_full_path }}"
+    />
+    <meta
+      property="og:image"
+      content='{% if request.image %}{{request.image}}{% else %}{% static "frontend/img/img_share.jpg" %}{% endif %}'
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>
+      {% if request.title %}{{request.title}}{% else %}{{default_title}}{% endif %}
+    </title>
+    <meta
+      name="description"
+      content="{% if request.description %}{{request.description}}{% else %}{{default_description}}{% endif %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href='{% static "frontend/img/favicon.png" %}'
+    />
+    <link href='{% static "frontend/main.css" %}' rel="stylesheet" />
+    {% endwith %}
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    <div class="container-fluid p-0" style="overflow-x: hidden">
+      {% block top-bar %}
+      {% include "top_bar.html" %} {% endblock %} 
+      {% block content %} {% endblock %} 
+      {% block footer %} {% include "footer.html" %}
+      {% endblock %}
+    </div>
+  </body>
+
+  {% block scripts %}{% endblock %}
+  <script
+    type="text/javascript"
+    src='{% static "frontend/vendors-main.js" %}'
+  ></script>
+  <script type="text/javascript" src='{% static "frontend/main.js" %}'></script>
+</html>

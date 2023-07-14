@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load i18n %} 
+{% block content %}
+<div class="container-fluid page-content-wrapper">
+  <div class="container-registration mb-3">
+    {% block user_title_container %}
+    <h1 class="text-center text-accent h2 h1-md">
+      {% block user_title %}{% trans "Register title" %}{% endblock %}
+    </h1>
+    {% endblock %} {% block user_description_container %}
+    <p class="pb-4 mt-4 mb-2">
+      {% block user_description %}{% trans "Register description" %}{% endblock %}
+    </p>
+    {% endblock %} {% block user_content %}{% endblock %}
+  </div>
+  <div id="unauthenticated-app"></div>
+</div>
+{% endblock %} {% load static %} {% block scripts %}
+<script>
+  var app_data = null;
+</script>
+{% endblock %}
