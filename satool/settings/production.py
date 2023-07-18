@@ -10,6 +10,8 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 ALLOWED_HOSTS = [
     "satool-backend-8ba91e884185.herokuapp.com",
+    "api.trustmarkinitiative.com",
+    "app.trustmarkinitiative.com",
 ]
 
 import dj_database_url
@@ -42,7 +44,11 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = os.environ["DEFAULT_FROM_EMAIL"]
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("https://satool-frontend-b98fe011b135.herokuapp.com",)
+CORS_ORIGIN_WHITELIST = (
+    "https://satool-frontend-b98fe011b135.herokuapp.com",
+    "https://www.trustmarkinitiative.com",
+    "https://trustmarkinitiative.com",
+)
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
