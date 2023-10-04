@@ -11,7 +11,7 @@ django-registration==3.3
 django_bleach==3.0.1
 django-storages==1.13.2
 boto3==1.26.157
-Pillow==9.5.0
+Pillow==10.0.1
 django-allauth==0.50.0
 dj-rest-auth==2.2.5
 gunicorn==20.1.0
