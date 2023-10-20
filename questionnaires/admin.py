@@ -22,7 +22,6 @@ class TabularQuestionOptionAdmin(admin.TabularInline):
         "id",
     ]
     ordering = ("id",)
-    autocomplete_fields = ["next"]
 
 
 @admin.register(Question)
@@ -47,7 +46,6 @@ class QuestionAdmin(admin.ModelAdmin):
     readonly_fields = ["id", "max_score"]
     ordering = ("order",)
     inlines = [TabularQuestionOptionAdmin]
-    autocomplete_fields = ["show_if_answer"]
 
 
 @admin.register(Questionnaire)
