@@ -27,8 +27,8 @@ class TabularQuestionOptionAdmin(admin.TabularInline):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = (
-        "order",
         "text",
+        "order",
     )
     fields = (
         "order",
