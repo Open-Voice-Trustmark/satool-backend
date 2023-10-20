@@ -44,7 +44,7 @@ class QuestionAdmin(admin.ModelAdmin):
         "help_text_es",
     )
     readonly_fields = ["id", "max_score"]
-    ordering = ("id",)
+    ordering = ("-order",)
     inlines = [TabularQuestionOptionAdmin]
 
 
