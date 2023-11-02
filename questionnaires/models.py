@@ -26,61 +26,9 @@ class Questionnaire(DateMixin):
         return Question.objects.filter(questionnaire=self, section=section).aggregate(
             Sum("max_score")
         )["max_score__sum"]
-        """ options = (
-            QuestionOption.objects.filter(
-                question__questionnaire=self, question__section=section
-            )
-            .order_by("question_id")
-            .values("question_id")
-            .order_by()
-            .annotate(max_score=Max("score"))
-            .filter(question_id=models.OuterRef("question_id"))
-            .values("max_score")
-        )
-        result = (
-            QuestionOption.objects.filter(
-                question__questionnaire=self, question__section=section
-            )
-            .annotate(
-                max_score=models.Subquery(options),
-            )
-            .filter(score=models.F("max_score"))
-            .values("question_id", "max_score")
-            .distinct("question_id")
-            .values("max_score")
-        )
-
-        score = 0
-        for r in result:
-            score += r["max_score"]
-
-        return score """
 
     @property
     def total_score(self):
-        # options = (
-        #    QuestionOption.objects.filter(question__questionnaire=self)
-        #    .order_by("question_id")
-        #    .values("question_id")
-        #    .order_by()
-        #    .annotate(max_score=Max("score"))
-        #    .filter(question_id=models.OuterRef("question_id"))
-        #    .values("max_score")
-        # )
-        # result = (
-        #    QuestionOption.objects.filter(question__questionnaire=self)
-        #    .annotate(
-        #        max_score=models.Subquery(options),
-        #    )
-        #    .filter(score=models.F("max_score"))
-        #    .values("question_id", "max_score")
-        #    .distinct("question_id")
-        #    .values("max_score")
-        # )
-
-        # score = 0
-        # for r in result:
-        #    score += r["max_score"]
         return Question.objects.filter(questionnaire=self).aggregate(Sum("max_score"))[
             "max_score__sum"
         ]
