@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from rest_framework import viewsets, views
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response

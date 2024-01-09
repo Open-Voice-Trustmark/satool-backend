@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from django.urls import path, re_path, include
 from . import views
 from rest_framework import routers

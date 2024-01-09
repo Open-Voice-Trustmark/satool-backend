@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from rest_framework.views import APIView
 from .models import *
 from rest_framework.exceptions import ParseError

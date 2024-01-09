@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 """
 URL configuration for satool project.
 

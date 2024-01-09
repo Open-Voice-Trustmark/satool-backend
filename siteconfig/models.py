@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.contrib.sites.models import Site

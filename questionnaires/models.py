@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from django.db import models
 from accounts.models import User
 from django.db.models import Sum, Max

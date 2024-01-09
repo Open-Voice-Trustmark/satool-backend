@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from modeltranslation.translator import register, TranslationOptions
 from .models import *
 

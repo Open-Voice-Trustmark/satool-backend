@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from allauth.account.adapter import DefaultAccountAdapter
 from django.conf import settings
 

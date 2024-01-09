@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 from django.contrib import admin
 from .models import *
 from modeltranslation.admin import TranslationAdmin, TranslationTabularInline

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0 #
+
 import os
 from satool.settings.common import *
 import django_heroku
