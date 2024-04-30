@@ -12,28 +12,28 @@ router.register(
 
 urlpatterns = [
     re_path(
-        "^questions/(?P<questionnaire>[-\d]+)/(?P<section>[-\d]+)$",
+        r'^questions/(?P<questionnaire>[-\d]+)/(?P<section>[-\d]+)$',
         views.QuestionViewSet.as_view({"get": "list"}),
     ),
     re_path(
-        "^questions/(?P<questionnaire>[-\d]+)/question/(?P<question>[-\d]+)$",
+        r'^questions/(?P<questionnaire>[-\d]+)/question/(?P<question>[-\d]+)$',
         views.QuestionViewSet.as_view({"get": "list"}),
     ),
     re_path(
-        "^questionnaire/(?P<questionnaire>[-\d]+)$",
+        r'^questionnaire/(?P<questionnaire>[-\d]+)$',
         views.QuestionnaireView.as_view(),
     ),
     re_path(
-        "^questionnaire/new$",
+        r'^questionnaire/new$',
         views.CreateQuestionnaireView.as_view(),
     ),
     re_path(
-        "^questionnaire/(?P<questionnaire>[-\d]+)/answers$",
+        r'^questionnaire/(?P<questionnaire>[-\d]+)/answers$',
         views.AnswersView.as_view(),
     ),
     re_path(
-        "^results/(?P<questionnaire>[-\d]+)$",
+        r'^results/(?P<questionnaire>[-\d]+)$',
         views.ResultsView.as_view(),
     ),
-    path("", include(router.urls)),
+    path('', include(router.urls)),
 ]

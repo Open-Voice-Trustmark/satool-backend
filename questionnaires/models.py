@@ -3,7 +3,7 @@
 from django.db import models
 from accounts.models import User
 from django.db.models import Sum, Max
-from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 class DateMixin(models.Model):
@@ -100,7 +100,7 @@ class Question(models.Model):
     section = models.ForeignKey(Section, null=False, on_delete=models.PROTECT)
     text = models.TextField(blank=False, max_length=500)
     order = models.PositiveSmallIntegerField(default=1)
-    help_text = RichTextField(blank=True, max_length=2000, config_name="basic")
+    help_text = CKEditor5Field(blank=True, max_length=2000, config_name="basic")
     min_answers = models.PositiveSmallIntegerField(default=1)
     max_answers = models.PositiveSmallIntegerField(default=1)
     max_score = models.PositiveSmallIntegerField(default=0)
@@ -137,7 +137,7 @@ class QuestionOption(models.Model):
     order = models.PositiveSmallIntegerField(default=1)
     score = models.PositiveSmallIntegerField(default=0)
     free_text_placeholder = models.CharField(blank=True, max_length=500)
-    info_text = RichTextField(blank=True, max_length=300, config_name="minimal")
+    info_text = CKEditor5Field(blank=True, max_length=300, config_name="minimal")
     next = models.ForeignKey(
         Question,
         null=True,
