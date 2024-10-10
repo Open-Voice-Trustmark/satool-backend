@@ -180,7 +180,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # AXES CONFIG - Login attempts
 AXES_LOCK_OUT_AT_FAILURE = True
 AXES_FAILURE_LIMIT = 5
-AXES_COOLOFF_TIME = timedelta(minutes=15)
+AXES_COOLOFF_TIME = timedelta(seconds=1)
 AXES_RESET_ON_SUCCESS = True
 AXES_ENABLE_ADMIN = True
 AXES_LOCKOUT_PARAMETERS = ["ip_address", ["username", "user_agent"]]
