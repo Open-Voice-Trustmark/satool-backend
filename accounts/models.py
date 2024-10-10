@@ -12,11 +12,13 @@ class UserManager(BaseUserManager):
     for authentication instead of usernames.
     """
 
-    def create_user(self, email, password, **extra_fields):
+    def create_user(self, email, password, terms_accepted, **extra_fields):
         if not email:
             raise ValueError(_("error_message_missing_email"))
         email = self.normalize_email(email)
-
+        print('create user')
+        print(terms_accepted)
+        print(str(extra_fields))
         if extra_fields.get("is_superuser"):
             user = self.model(first_name="admin", email=email, **extra_fields)
         else:

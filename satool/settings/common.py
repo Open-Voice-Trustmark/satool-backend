@@ -123,10 +123,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_ADAPTER = "accounts.adapters.CustomAccountAdapter"
 LOGIN_REDIRECT_URL = "/"
-REST_AUTH_REGISTER_SERIALIZERS = {
-	"REGISTER_SERIALIZER": "accounts.serializers.CustomRegisterSerializer"
-}
-REST_AUTH_PW_RESET_USE_SITES_DOMAIN = True
+
 
 # Translation
 MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
@@ -166,7 +163,9 @@ REST_FRAMEWORK = {
 REST_AUTH = {
 	'USE_JWT': True,
 	'JWT_AUTH_COOKIE': "jwt-auth",
-	'JWT_AUTH_REFRESH_COOKIE': "jwt-auth-refresh"
+	'JWT_AUTH_REFRESH_COOKIE': "jwt-auth-refresh",
+	"REGISTER_SERIALIZER": "accounts.serializers.CustomRegisterSerializer",
+	"PASSWORD_RESET_USE_SITES_DOMAIN": True
 }
 SIMPLE_JWT = {
 	"ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
