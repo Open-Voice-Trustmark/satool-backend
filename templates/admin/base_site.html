@@ -1,6 +1,11 @@
-{% extends 'admin/base.html' %} {% load static %} {% block branding %}
-{% block extrastyle %} {% endblock %}
-<h1>
-  OVON Self Assessment Admin
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block branding %}
+{% block extrastyle %}
+  <link rel='stylesheet' href='{% static 'admin/admin.css' %}'>
+{% endblock %}
+<h1 class="customLogoTitle">
+<img src="{% static 'admin/logo_white.svg' %}" alt="Ruralitud">
 </h1>
 {% endblock %}
+

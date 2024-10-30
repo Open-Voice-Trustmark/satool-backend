@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 	"dj_rest_auth.registration",
 	"modeltranslation",
 	"corsheaders",
-	"ckeditor",
 	'django_ckeditor_5',
 	"axes",
 	"satool",
