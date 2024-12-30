@@ -35,6 +35,8 @@ EMAIL_USE_TLS = False
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 1025
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -43,7 +45,5 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
-
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 CORS_ORIGIN_ALLOW_ALL = True

@@ -1,4 +1,4 @@
-Django==5.1.2
+Django==5.1.4
 psycopg2==2.9.10
 djangorestframework==3.15.2
 djangorestframework-simplejwt==5.3.1
@@ -13,8 +13,8 @@ django_bleach==3.1.0
 django-storages==1.14.4
 boto3==1.35.51
 Pillow==11.0.0
-django-allauth==64.1.0
-dj-rest-auth==6.0.0
+django-allauth==65.3.1
+dj-rest-auth==7.0.0
 gunicorn==23.0.0
 psycopg2-binary==2.9.10
 django-heroku==0.3.1
